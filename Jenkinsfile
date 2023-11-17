@@ -20,9 +20,9 @@ pipeline{
             steps{
                 script{
                     withCredentials([usernamePassword(credentialsId: 'docker_hub', passwordVariable: 'USER_PASSWORD', usernameVariable: 'USER_NAME')]) {
-                        bat "docker login -u ${USER_NAME} -p ${USER_PASSWORD}"
-                        bat "docker tag ${dockerImage} guluma/${dockerImage}"
-                        bat "docker push guluma/${dockerImage}"
+                        bat "docker login -u %USER_NAME% -p %USER_PASSWORD%"
+                        bat "docker tag $dockerImage guluma/$dockerImage"
+                        bat "docker push guluma/$dockerImage"
                     }
                 }
             }
