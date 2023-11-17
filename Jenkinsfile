@@ -4,7 +4,7 @@ pipeline{
         dockerImage="mynginxpro"
     }
     stages{
-        // stage("checkout github"){
+        // stage("checkout github connect"){
         //     steps{
         //         git credentialsId: 'd99d963c-14c8-424e-93d3-ecec924a0d9f', url: 'https://github.com/GULUMAWAKUMA/NginxProject.git'
         //     }
